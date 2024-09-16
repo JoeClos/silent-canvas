@@ -8,7 +8,7 @@ import { useState } from "react";
 
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isNavbarOpen] = useState<boolean>(false);
 
   return (
     <Router>
