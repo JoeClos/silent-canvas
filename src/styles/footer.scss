@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.footer {
+    color: $sangriaRed;
+    font-size: 14px;
+    padding: 60px 0;
+    width: 100%;
+
+    p {
+        text-align: center;
+    }
+}

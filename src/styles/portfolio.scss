@@ -1,0 +1,71 @@
+@import './variables.scss';
+
+.frame {
+    padding: 4rem 10rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); // 12-column grid
+    grid-template-rows: auto;
+    gap: 1rem;
+
+    .photo1 {
+        grid-column: span 6;
+        grid-row: span 2;
+        background: url('../assets/blue.jpg') center center / cover; // Use the correct path
+        height: 400px; // Adjust height as needed
+    }
+
+    .photo2 {
+        grid-column: span 3;
+        grid-row: span 1;
+        background: url('../assets/rose.jpg') center center / cover;
+        height: 200px;
+    }
+
+    .photo3 {
+        grid-column: span 3;
+        grid-row: span 2;
+        background: url('../assets/bee.jpg') center center / cover;
+        height: 400px;
+    }
+
+    .photo4 {
+        grid-column: span 6;
+        grid-row: span 1;
+        background: url('../assets/flowers.jpg') center center / cover;
+        height: 200px;
+    }
+
+    .photo5 {
+        grid-column: 7/10;
+        grid-row: 2/4;
+        background: url('../assets/lily_flower.jpg') center center / cover;
+        height: 400px;
+    }
+
+    .photo6 {
+        grid-column: 10 / 13;
+        grid-row: 3 / 5;
+        background: url('../assets/path.jpg') center center / cover;
+        height: 400px;
+    }
+
+    .photo7 {
+        grid-column: 1/10;
+        grid-row: 4/7;
+        background: url('../assets/colorfull_flowers.jpg') center center / cover;
+        height: 200px;
+    }
+
+    .photo8 {
+        grid-column: 1/4;
+        grid-row: 6/8;
+        background: url('../assets/ice.jpg') center center / cover;
+        height: 200px;
+    }
+
+}
