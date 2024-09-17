@@ -6,16 +6,22 @@
 }
 
 .filter {
+    position: sticky;
+    top: 0;
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-bottom: 1rem;
     justify-content: center;
+    background-color: $background-color;
+    padding: 10px 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .filter-button {
-    padding: 0.75rem 1.5rem;
-    margin: 1rem 0;
-    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
     border: none;
     background-color: $button;
     color: white;
@@ -33,36 +39,35 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
-  }
-  
-  .photo {
+}
+
+.photo {
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
-    flex: 1 1 calc(16.66% - 1rem); /* 6 items per row on larger screens */
-    max-width: calc(16.66% - 1rem);
-  }
-  
-  .photo img {
+    width: calc(16.66% - 1rem);
+}
+
+.photo img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; 
     transition: opacity 0.3s ease;
-  }
-  
-  .photo:hover {
+}
+
+.photo:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .photo:hover img {
+}
+
+.photo:hover img {
     opacity: 0.8;
-  }
-  
-  .photo:hover::after {
+}
+
+.photo:hover::after {
     content: 'View Photo';
     position: absolute;
     bottom: 10px;
@@ -74,37 +79,38 @@
     border-radius: 4px;
     font-size: 14px;
     transition: opacity 0.3s ease;
-  }
-  
-  .photo:hover::after {
     opacity: 1;
-  }
+}
 
-  @media (max-width: 1200px) {
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
     .photo {
-      flex: 1 1 calc(20% - 1rem); /* 5 items per row on medium screens */
-      max-width: calc(20% - 1rem);
+        width: calc(20% - 1rem);
     }
-  }
-  
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
     .photo {
-      flex: 1 1 calc(25% - 1rem); /* 4 items per row on small screens */
-      max-width: calc(25% - 1rem);
+        width: calc(25% - 1rem);
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .photo {
-      flex: 1 1 calc(33.33% - 1rem); /* 3 items per row on extra small screens */
-      max-width: calc(33.33% - 1rem);
+        width: calc(33.33% - 1rem);
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     .photo {
-      flex: 1 1 calc(50% - 1rem); /* 2 items per row on very small screens */
-      max-width: calc(50% - 1rem);
+        width: calc(50% - 1rem);
     }
-  }
+}
+
+@media (max-width: 400px) {
+    .photo {
+        width: 100%;
+    }
+}
   
