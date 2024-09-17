@@ -38,3 +38,14 @@
     cursor: pointer;
   }
   
+  @media (max-width: 768px) {
+    .photo-modal-content {
+      margin: 0 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .photo-modal-content {
+      margin: 0 10px;
+    }
+  }

@@ -1,11 +1,11 @@
-@import './variables.scss';  
+@import './variables.scss';
 
 .contact {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to top, $background-color, rgb(240, 234, 229));  
+  background: linear-gradient(to top, $background-color, rgb(240, 234, 229));
   padding: 2rem;
 
   .contact-container {
@@ -21,12 +21,12 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: $primary-color;
-      font-family: 'Playfair Display', serif;  // Example fancy font
+      font-family: 'Playfair Display', serif; // Example fancy font
     }
 
     p {
       margin-bottom: 2rem;
-    //   color: $link-text-color;
+      //   color: $link-text-color;
       font-size: 1.2rem;
     }
 
@@ -48,6 +48,7 @@
 
         input,
         textarea {
+          font-family: Arial, Helvetica, sans-serif;
           border: 1px solid #ddd;
           border-radius: 5px;
           padding: 0.75rem;
@@ -82,5 +83,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .contact-container p {
+    font-size: 1rem;
   }
 }
