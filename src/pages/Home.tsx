@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../styles/home.scss';
 
 const Home = () => {
     const [isVisible, setIsVisible] = useState(true);
+    const homeContentRef = useRef<HTMLDivElement | null>(null); // Add type here
 
     useEffect(() => {
-        let lastScrollY = window.screenY;
+        let lastScrollY = window.scrollY;
 
         const handleScroll = () => {
-
             if (window.scrollY > lastScrollY) {
                 setIsVisible(false);
             } else {
@@ -22,7 +22,14 @@ const Home = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [])
+    }, []);
+
+    // Function to handle scrolling when chevron is clicked
+    const handleChevronClick = () => {
+        if (homeContentRef.current) {
+            homeContentRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <>
@@ -32,13 +39,13 @@ const Home = () => {
                 </video>
                 <div className={`overlay ${isVisible ? 'visible' : 'hidden'}`}>
                     <h1>Welcome to the art of silent landscapes</h1>
-                    <div className="scroll-indicator">
-                        <span>Scroll down too discover more</span>
+                    <div className="scroll-indicator" onClick={handleChevronClick}>
+                        <span>Scroll down to discover more</span>
                         <i className="fa-solid fa-chevron-down"></i>
                     </div>
                 </div>
             </div>
-            <div className="home" id="home-content">
+            <div className="home" id="home-content" ref={homeContentRef}>
                 <section className="home-header">
                     <h2>My collection</h2>
                     <h3>Explore the beauty of nature and the art of minimalism through my lens.</h3>
