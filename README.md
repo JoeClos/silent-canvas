@@ -1,13 +1,10 @@
-﻿# Photography Portfolio App
+﻿# Silent Canvas
 
 ## A minimalistic photography portfolio built with React, Vite, TypeScript, and Sass.
 
 ## 📹 Video Demo
 
-[![Watch the Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/m9kqbh_YfJw)
-
-
-
+https://github.com/user-attachments/assets/270f81d1-6705-4380-9ea5-df22cca5d58a
 
 This application showcases a curated collection of landscape and minimalistic photography. It features a responsive layout with a sliding sidebar navigation, a dynamic flexbox photo layout, and artistic sections for presenting the photographer's work and background.
 
