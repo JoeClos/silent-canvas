@@ -2,7 +2,7 @@
 
 ## A minimalistic photography portfolio built with React, Vite, TypeScript, and Sass.
 
-Here’s a glimpse of what the Photography Portfolio app looks like:
+📸 Here’s a glimpse of what the **Photography Portfolio** app looks like:
 
 ![Landing page](/public/assets/landing-page.png)
 
