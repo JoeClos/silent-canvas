@@ -35,4 +35,4 @@ This application showcases a curated collection of landscape and minimalistic ph
     # Start the development server:
     npm run dev
     ```
-3. **Access the project in the browser**: Open your browser and navigate to: http://localhost:5173 to view the app.
+2. **Access the project in the browser**: Open your browser and navigate to: http://localhost:5173 to view the app.
